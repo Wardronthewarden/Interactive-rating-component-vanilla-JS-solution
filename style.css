@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea{
+    font: inherit;
+}
+
+/*|| UTILITY CLASSES*/
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.hidden{
+    display: none !important ;
+}
+
+.centered{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+/*|| VARIABLES */
+
+:root{
+--background-color: grey;
+--heading-color: #fff;
+--text-color: hsl(217, 12%, 63%);
+--background-color: linear-gradient(hsl(213, 19%, 20%), hsl(213, 19%, 8%));
+--activeSelection-background-color: hsl(216, 12%, 54%);
+--selection-background-color: hsl(213, 19%, 20%);
+--active-color: rgb(235, 152, 0);
+
+--FF: Overpass, sans-serif;
+}
+html{
+    background-color: hsl(213, 19%, 15%);
+    font-family: var(--FF);
+}
+
+.Card{
+    background-image: var(--background-color);
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 22rem;
+    height: 23rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.responseCard__logo{
+    margin-left: 2rem;
+    width:2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background-color: var(--selection-background-color);
+    position: relative;
+}
+
+.responseCard__logo img{
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Card__header{
+    color: var(--heading-color);
+    padding: 2rem 2rem 0rem;
+    font-weight: 700;
+}
+
+.Card__paragraph{
+    padding: 1rem 2rem 2rem;
+    color: var(--text-color);
+    font-size: smaller;
+    font-weight: 400;
+}
+
+.selection__container{
+    display:flex;
+    flex-flow: row;
+    padding: 0rem 1.5rem 2rem;
+    justify-content: space-around;
+}
+
+.responseCard__selection{
+    border: var(--selection-background-color);
+    background-color: var(--selection-background-color);
+    color: var(--text-color);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.responseCard__selection:hover{
+    background-color: var(--active-color);
+    color: var(--heading-color);
+}
+.responseCard__selection:active{
+    background-color: hsl(217, 12%, 50%);
+    color:#fff;
+}
+
+.activeSelection{
+    background-color: hsl(217, 12%, 50%);
+    color:#fff;
+}
+
+.responseCard__submit{
+    margin: 0 2rem 0;
+    border: none;
+    height: 3rem;
+    border-radius: 1.5rem;
+    color: var(--heading-color);
+    background-color: var(--active-color);
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: smaller;
+}
+
+.responseCard__submit:hover{
+    background-color: var(--heading-color);
+    color: var(--active-color);
+}
+
+.thankYou__Confirmation{
+    padding: 0.6rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    background-color: var(--selection-background-color);
+    color: var(--active-color);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;background-color: var(--selection-background-color);
+    color: var(--active-color);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--activeSelection-background-color);
+}
+
+footer a:hover, footer a:active{
+    color:var(--heading-color);
+}
